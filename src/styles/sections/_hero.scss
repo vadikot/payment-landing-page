@@ -1,0 +1,100 @@
+.hero {
+  background: url("/src/img/hero-background.png") no-repeat top right;
+  background-size: contain;
+  @media (max-width: $breakpoint-992) {
+    background-size: 70%;
+    background-position: center right;
+  }
+  @media (max-width: $breakpoint-480) {
+    background: none;
+  }
+}
+
+.hero__title {
+  max-width: 400px;
+  font: 700 48px/62px 'Metropolis', sans-serif;
+  color: $color-black;
+  margin-bottom: 15px;
+  @media (max-width: $breakpoint-480) {
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+.description {
+  font: 400 14px/24px 'Metropolis', sans-serif;
+  color: $color-text;
+  @media (max-width: $breakpoint-480) {
+    text-align: justify;
+  }
+}
+
+.hero__buttons {
+  margin: 62px 0 130px 0;
+  @media (max-width: $breakpoint-480) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 42px 0 60px 0;
+  }
+}
+
+.counter {
+  @media (max-width: $breakpoint-480) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.counter__title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.counter__items {
+  display: flex;
+  padding-bottom: 120px;
+  margin-bottom: 75px;
+  @media (max-width: $breakpoint-768) {
+    padding-bottom: 30px;
+  }
+  @media (max-width: $breakpoint-480) {
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.count__item {
+  &:not(:last-child) {
+    margin-right: 80px;
+    @media (max-width: $breakpoint-768) {
+      margin-right: 40px;
+    }
+    @media (max-width: $breakpoint-480) {
+      margin-right: 20px;
+    }
+  }
+
+  & > div {
+    font: 400 36px/36px 'Metropolis', sans-serif;
+    @media (max-width: $breakpoint-480) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+    color: $color-black;
+    margin-bottom: 12px;
+  }
+}
+
+.count__description {
+  font: 400 14px/14px 'Metropolis', sans-serif;
+  color: $color-description;
+  text-transform: uppercase;
+  @media (max-width: $breakpoint-480) {
+    font-size: 13px;
+    line-height: 13px;
+  }
+}

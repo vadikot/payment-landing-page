@@ -1,0 +1,40 @@
+.partners {
+  background: #FAF9FA;
+}
+
+.partners__container {
+  padding: 50px 30px;
+}
+
+.partners__title {
+  font-size: 28px;
+  line-height: 28px;
+  color: #232427;
+  text-align: center;
+  margin-bottom: 46px;
+  @media (max-width: $breakpoint-480) {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 35px;
+  }
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 45px;
+  @media (max-width: 610px) {
+    img {
+      max-width: 50%;
+    }
+  }
+  @media (max-width: $breakpoint-480) {
+    img {
+      max-width: 41%;
+    }
+  }
+  @media (max-width: 400px) {
+    justify-content: space-between;
+  }
+}

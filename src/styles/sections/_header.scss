@@ -1,0 +1,198 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #000;
+}
+
+.navbar {
+  padding: 16px 0;
+  @media (max-width: $breakpoint-768) {
+    padding: 5px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+  }
+
+  &.toggle {
+    height: 100vh;
+    background: lightblue;
+  }
+
+  .menu,
+  .submenu {
+    display: flex;
+    align-items: center;
+  }
+
+  //
+  // Burger icon
+  //
+  .icon__burger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+  }
+
+  .icon__burger:before,
+  .icon__burger:after,
+  .icon__burger div {
+    background: $color-blue;
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+  .link {
+    color: #000000;
+    padding: 4px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .menu__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover > .submenu {
+      display: block;
+    }
+  }
+
+  .menu__item__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font: 600 14px/14px 'Metropolis', sans-serif;
+    text-align: right;
+    color: $color-description;
+    padding: 4px 10px;
+
+    &:hover {
+      color: $color-blue;
+
+      .icon path {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  .submenu__item {
+    display: flex;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-768) {
+    .icon__burger {
+      display: block;
+      //display: block;
+    }
+    .menu {
+      display: none;
+    }
+  }
+
+  &.toggle {
+    .container {
+      height: 100%;
+      align-items: center;
+    }
+
+    .logo {
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+
+    .icon__burger {
+      align-self: flex-start;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .menu__item {
+      margin: 0;
+    }
+
+    .menu__item__link {
+      padding: 13px 20px;
+      font: 900 18px/18px "Metropolis", sans-serif;
+      border-radius: 4px;
+      border: 1px solid black;
+      min-width: 150px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon__burger:before {
+      transform: translateY(11px) rotate(135deg);
+    }
+
+    .icon__burger:after {
+      transform: translateY(-11px) rotate(-135deg);
+    }
+
+    .icon__burger div {
+      transform: scale(0);
+    }
+  }
+
+}
+
+.logo {
+  font: 800 18px/18px 'Metropolis', sans-serif;
+  color: #000000;
+}
+
+.open__btn-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 20px;
+  font: 400 14px/14px 'Metropolis', sans-serif;
+  color: #ffffff;
+  background: $color-blue;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-darkBlue;
+  }
+
+  & + .button-link {
+    font: 400 14px/14px 'Metropolis', sans-serif;
+    text-decoration: none;
+    margin-left: 46px;
+    color: $color-blue;
+
+    &:hover {
+      color: $color-darkBlue;
+    }
+  }
+}
+
+.icon__arrow {
+  margin-left: 10px;
+}

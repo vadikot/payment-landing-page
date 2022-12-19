@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Metropolis;
+  src: url("./src/fonts/Metropolis/Metropolis-Regular.eot"); // IE9 Compat Modes
+  src: url("./src/fonts/Metropolis/Metropolis-Regular.eot?#iefix") format("embedded-opentype"), // IE6-IE8
+  url("./src/fonts/Metropolis/Metropolis-Regular.woff") format("woff"),  // Modern Browsers
+  url("./src/fonts/Metropolis/Metropolis-Regular.ttf")  format("truetype"); //  Safari, Android, iOS
+}

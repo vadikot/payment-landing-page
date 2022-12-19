@@ -1,0 +1,1 @@
+"use strict";const btnEl=document.querySelector(".icon__burger"),navbarEl=document.querySelector(".navbar"),footerForm=document.querySelector(".footer__form"),body=document.body;function toggleMenu(){navbarEl.classList.toggle("toggle"),footerForm.classList.toggle("toggle"),body.classList.toggle("toggle")}btnEl.addEventListener("click",toggleMenu);

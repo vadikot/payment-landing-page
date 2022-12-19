@@ -1,0 +1,164 @@
+.footer {
+  background: $color-black;
+  padding: 97px 0 80px 0;
+  color: #ffffff;
+
+  @media (max-width: $breakpoint-768) {
+    padding: 30px 0 30px 0;
+  }
+
+  .logo {
+    display: block;
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-768) {
+      text-align: center;
+    }
+  }
+
+
+  .logo,
+  .description {
+    color: #ffffff;
+  }
+
+  .description {
+    max-width: 330px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-768) {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-768) {
+    align-items: center;
+  }
+
+  &:last-child {
+    .description {
+      margin: 10px 0 32px 0;
+      @media (max-width: $breakpoint-768) {
+        margin: 10px 0;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.footer__made {
+  font: 400 14px/14px 'Metropolis', sans-serif;
+  color: #D6D5DF;
+  @media (max-width: $breakpoint-768) {
+    margin: 20px 0 0 0;
+  }
+}
+
+.footer__title {
+  font: 600 16px/16px 'Metropolis', sans-serif;
+  margin-bottom: 12px;
+}
+
+.footer__form {
+  position: relative;
+  @media (max-width: $breakpoint-768) {
+    width: 100%;
+    max-width: 330px;
+  }
+  &.toggle,
+  &.toggle .footer__item__btn {
+     position: initial;
+  }
+}
+
+.footer__form__input {
+  min-width: 100%;
+  font: 400 14px/14px 'Metropolis', sans-serif;
+  padding: 20px 55px 20px 20px;
+  color: #9998A4;
+  outline: 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer__item__btn {
+  display: inline-flex;
+  padding: 13px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: $color-blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: $color-darkBlue;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  @media (max-width: $breakpoint-768) {
+    margin-bottom: 30px !important;
+  }
+}
+
+.footer__socials-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-description;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  .youtube-hover-1 {
+    fill: $color-description;
+  }
+
+  .youtube-hover-2 {
+    fill: #ffffff;
+  }
+
+  &:hover {
+    fill: #CD201F;
+
+    .youtube-hover-1 {
+      fill: #ffffff;
+    }
+
+    .youtube-hover-2 {
+      fill: #CD201F;
+    }
+
+    .twitter-hover {
+      fill: #00acee;
+    }
+
+    .linkedin-hover {
+      fill: #0e59a4;
+    }
+
+    .discord-hover {
+      fill: #4682B4;
+    }
+  }
+}

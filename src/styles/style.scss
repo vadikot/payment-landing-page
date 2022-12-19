@@ -1,0 +1,25 @@
+/*  Global styles */
+@import "global/reset";
+@import "global/vars";
+
+//@import "global/fonts";
+@import "global/global";
+
+
+/*  Sections & pages */
+@import "sections/header";
+@import "sections/hero";
+@import "sections/special";
+@import "sections/partners";
+@import "sections/team";
+@import "sections/footer";
+
+
+/*  Libraries */
+// @import "swiper"; // The Most Modern Mobile Touch Slider
+
+//
+//  open__btn-link  - плохое название, изменить его
+//
+// в _hero.scss есть комментарии, посмотреть
+//
